@@ -1,0 +1,15 @@
+#ROOT_SOURCE/namespaces/NAMESPACE/repo-sync.yaml
+apiVersion: configsync.gke.io/v1beta1
+kind: RepoSync
+metadata:
+  name: repo-sync-1
+  namespace: team-1
+spec:
+  sourceType: git
+  # Since this is for a namespace repository, the format is unstructured
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/zhongzhoucai/namespace-scoped-source-1.git
+    revision: HEAD
+    branch: main
+    auth: none
