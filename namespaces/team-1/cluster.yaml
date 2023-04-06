@@ -1,7 +1,7 @@
 kind: Cluster
 apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
-  name: gke_anthos-sds-dev_us-central1_zzcai-restore
+  name: zzcai-restore
   labels:
     environment: prod
     location: central
