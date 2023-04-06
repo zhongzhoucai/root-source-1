@@ -3,5 +3,13 @@ apiVersion: clusterregistry.k8s.io/v1alpha1
 metadata:
   name: zzcai-restore
   labels:
-    environment: prod
-    location: central
+    environment: test
+---
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: selector-env-test
+spec:
+  selector:
+    matchLabels:
+      environment: test
